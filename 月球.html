@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body,html{
+    width: 100%;
+    height: 100%;
+    background: #2a3137;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wc {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: dh 1.5s linear  infinite;
+  }
+  .wc .nc {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 10px;
+    top: 10px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 999;
+  }
+  .wc span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 50%;
+  }
+  span:nth-child(2) {
+    filter: blur(5px);
+  }
+  span:nth-child(3) {
+    filter: blur(15px);
+  }
+  span:nth-child(4) {
+    filter: blur(25px);
+  }
+  span:nth-child(5) {
+    filter: blur(150px);
+  }
+  @keyframes dh {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+</style>
+
+<body>
+  <div class="wc">
+    <div class="nc"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</body>
+</html>
